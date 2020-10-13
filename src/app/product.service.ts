@@ -11,7 +11,7 @@ constructor(private _http: Http) { }
   
   getAlbum(id: number) {
 
-    return this._http.get(this._albumUrl) .map((response: any) => Response.json());
+    return this._http.get(this._albumUrl) .map((response) => Response.json());
   }
 
 }
