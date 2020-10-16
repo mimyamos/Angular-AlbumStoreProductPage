@@ -9,14 +9,14 @@ import { Album } from '../album';
   templateUrl: './product-tracklisting.component.html',
   styleUrls: ['./product-tracklisting.component.css']
 })
-export class ProductTrackListingComponent implements OnInit {
+export class ProductTracklistingComponent implements OnInit {
 
   albumInfo: Album;
 
-  constructor(private _productService: ProductService) {}
+  constructor(private _productService: ProductService) { }
 
   ngOnInit() {
-    this._productService.getAlbum(1).subscribe(response => 
-    this.albumInfo = response);
+    this._productService.getAlbum(1).subscribe(response => this.albumInfo = response);
   }
+
 }
